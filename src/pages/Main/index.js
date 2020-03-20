@@ -13,7 +13,7 @@ export default function Main() {
   /**
    * States
    */
-  const [seconds, setSeconds] = useState(1490);
+  const [seconds, setSeconds] = useState(0);
   const [play, setPlay] = useState(false);
   const [inWork, setInWork] = useState(true);
 
