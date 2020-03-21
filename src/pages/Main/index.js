@@ -7,7 +7,10 @@ import {
   ButtonContainer,
   TextContainer,
   Text,
+  PomodoroContainer,
 } from './styles';
+
+import Todo from '../Todo';
 
 export default function Main() {
   /**
@@ -100,24 +103,27 @@ export default function Main() {
    */
   return (
     <Container>
-      <TextContainer>
-        <Text>
-          {`${Math.floor(seconds / 60)}:${seconds -
-            Math.floor(seconds / 60) * 60}`}
-        </Text>
-      </TextContainer>
-      <ButtonContainer>
-        <Button onClick={handlePlayPause}>
-          {play ? (
-            <MdPause size={22} color="#333" />
-          ) : (
-            <MdPlayArrow size={22} color="#333" />
-          )}
-        </Button>
-        <Button onClick={handleStop}>
-          <MdStop size={22} color="#333" />
-        </Button>
-      </ButtonContainer>
+      <PomodoroContainer>
+        <TextContainer>
+          <Text>
+            {`${Math.floor(seconds / 60)}:${seconds -
+              Math.floor(seconds / 60) * 60}`}
+          </Text>
+        </TextContainer>
+        <ButtonContainer>
+          <Button onClick={handlePlayPause}>
+            {play ? (
+              <MdPause size={22} color="#333" />
+            ) : (
+              <MdPlayArrow size={22} color="#333" />
+            )}
+          </Button>
+          <Button onClick={handleStop}>
+            <MdStop size={22} color="#333" />
+          </Button>
+        </ButtonContainer>
+      </PomodoroContainer>
+      <Todo />
     </Container>
   );
 }
