@@ -70,8 +70,9 @@ export const TodosContainer = styled.div`
 export const TodoContainer = styled.div`
   padding: 5px 10px;
   margin: 5px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.12);
-  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.03), 0 3px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 3px;
   position: relative;
 
   display: flex;
